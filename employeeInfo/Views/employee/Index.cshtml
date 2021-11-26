@@ -1,0 +1,31 @@
+﻿<br /> 
+<form action="/Demo/sendToAll" method="post">
+
+    <input type="number" placeholder="from" name="from" />
+    <input type="number" placeholder="to" name="to" />
+    <input type="submit" value="send emails" />
+</form>
+
+<div class="container row p-0 m-0">
+    <div class="col-6">
+        <h2 class="text-info">employee List</h2>
+    </div>
+
+    <div class="col-12 border p-3">
+        <table id="DT_load" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/emlpoyeeList.js"></script>
+
+}-->
+

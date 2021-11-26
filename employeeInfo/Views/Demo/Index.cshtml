@@ -1,0 +1,99 @@
+﻿@model employee_sData
+
+@{ ViewBag.Title = "DemoViewAsPdfAsync"; }
+@{ var data = (employee_sData)ViewData["data"];
+    // var fname = ViewData["fname"];
+    //var data = ViewBag.data;
+}
+
+@*  <h3>Id:@Model.employeeId </h3>
+    <h3>first:@Model.firstName </h3>
+    <h3>last name: @Model.LastName</h3>
+    <h3>email: @Model.Email</h3>
+
+    <h3>department id:@Model.department_id</h3>
+    <h3>hire date:  @Model.hire_date</h3>
+    <h3>salary:  @Model.salary</h3>
+*@
+
+<br />
+<br />
+<br />
+<table class="table table-bordered justify-content-end flex-row-reverse">
+    <tr class="flex-row-reverse justify-content-end ">
+        <td> ------</td>
+        <td style="background:rgb(171, 211, 243);">الشركه</td>
+        <td>@Model.hire_date </td>
+        <td style="background:rgb(171, 211, 243);">الشهر</td>
+    </tr>
+    <tr>
+        <td>@Model.firstName  @Model.LastName</td>
+        <td style="background:rgb(171, 211, 243);">اسم الموظف</td>
+        <td>@Model.employeeId </td>
+        <td style="background:rgb(171, 211, 243);">كود الموظف</td>
+    </tr>
+    <tr>
+        <td>@Model.job_id </td>
+        <td style="background:rgb(171, 211, 243);">الوظيفه</td>
+        <td>@Model.department_id</td>
+        <td style="background:rgb(171, 211, 243);">القطاع _الأدراة </td>
+    </tr>
+    <tr>
+        <td>-----</td>
+        <td style="background:rgb(171, 211, 243);">أيام العمل</td>
+        <td>@Model.salary</td>
+        <td style="background:rgb(171, 211, 243);">الراتب</td>
+    </tr>
+</table>
+<br />
+
+
+<table class="table table-bordered align-content-end">
+    <tr><th colspan="2" class="text-center" style="background: rgb(190, 214, 233); font-weight:900">الاستحقاقات</th></tr>
+    <tr>
+        <td>@Model.salary</td>
+        <td>الراتب الاساسي</td>
+    </tr>
+    <tr>
+        <td>--------</td>
+        <td>بدل وجبات وإعاشة</td>
+    </tr>
+    <tr>
+        <td>------</td>
+        <td>بدل انتقال متغير</td>
+    </tr>
+</table>
+<br />
+
+<p style="border-bottom: solid; background: rgb(190, 214, 233);"> <span style="font-weight:900"> @Model.salary :</span> الأجمالي  </p>
+<br />
+
+
+<table class="table table-bordered align-content-end">
+    <tr><th colspan="2" class="text-center" style="background: rgb(240, 207, 238); font-weight:900">الأستقطاعات</th></tr>
+    <tr>
+        <td>-----</td>
+        <td> الضرائب</td>
+    </tr>
+    <tr>
+        <td>------</td>
+        <td>المرضي</td>
+    </tr>
+    <tr>
+        <td> ------</td>
+        <td>السلفة</td>
+    </tr>
+</table>
+<br />
+
+<p style="border-bottom: solid; background: rgb(240, 207, 238); "><span style="font-weight:900">@Model.salary :</span> الأجمالي   </p>
+<br />
+
+<p class="text-center"> <span style="color:red ; font-weight:900">@Model.salary</span> صافي الراتب </p>
+<br />
+<p1> فرع <span style="font-weight:900">@Model.department_id</span> نقل صافي المرتب الي رقم حساب <span style="font-weight:900">-----------</span> بنك </p1>
+<br />
+<br />
+<br />
+
+
